@@ -66,7 +66,7 @@ class Project(models.Model):
     budjet = models.CharField(max_length=50)
     start_date = models.CharField(max_length=30)
     end_date = models.CharField(max_length=30)
-    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Registrar")
+    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Client")
     status = models.CharField(max_length=20,
         choices = Status.choices,
         default = Status.NOT_STARTED
@@ -81,7 +81,7 @@ class Project(models.Model):
         return self.name + " " + self.description 
 
 class Payment(models.Model):
-    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Registrar")
+    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Client_payment")
     amount = models.FloatField()
     motive= models.CharField(max_length=50) #title of the payment made, purchace, service, refund
     currency = models.CharField(max_length=50)
@@ -118,7 +118,7 @@ class Refund(models.Model):
     motive = models.CharField(max_length=150) #summary of why refunding
     currency = models.CharField(max_length=150) 
     description = models.CharField(max_length=250)
-    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Registrar")
+    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Client_refund")
     complaint_id = models.ForeignKey(Complaint, on_delete=models.CASCADE,related_name="Complaint") #we need to know what precedded before a refund
     refund_mode = models.CharField(choices=PaymentMode.choices,
                             default=PaymentMode.VISA, max_length=50
@@ -143,7 +143,7 @@ class Subscription(models.Model): #payments to consume a product or service
     currency = models.CharField(max_length=150) 
     product_id = models.CharField(max_length=250) #actually product or service id
     category = models.CharField(max_length=100)#specify if a product or a service
-    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Registrar")
+    client_id = models.ForeignKey(Client, on_delete=models.CASCADE,related_name="Client_subscription")
     created = models.DateTimeField(auto_now_add=True) # date created
     updated = models.DateTimeField(auto_now=True)#date updated
     
@@ -240,7 +240,7 @@ class Program(models.Model):
     title = models.CharField(max_length=150)
     description = models.CharField(max_length=255)
     link_to_content = models.CharField(max_length=255)#pointer to where training materials are located
-    expert_id = models.ForeignKey(User, on_delete=models.CASCADE,related_name="Expert")#who is controlling the program content
+    expert_id = models.ForeignKey(User, on_delete=models.CASCADE,related_name="User")#who is controlling the program content
     created = models.DateTimeField(auto_now_add=True) # date created
     updated = models.DateTimeField(auto_now=True)#date updated
     
@@ -340,7 +340,7 @@ class Product(models.Model):
 class ProgramContent(models.Model):
     description = models.CharField(max_length=255)
     content_type = models.CharField(max_length=200) #video, text
-    program_id = models.ForeignKey(Program,)
+    program_id = models.ForeignKey(Program,on_delete=models.CASCADE,related_name="Program")
     order = models.IntegerField() #this will be used to decide on how the content is arranged
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
