@@ -88,11 +88,24 @@
                             <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                             <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <a href="{% url 'service' %}" class="nav-link nav-item dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="{% url 'service' %}" class="dropdown-item">Data analytics and decision support</a>
-                                    <a href="{% url 'service' %}" class="dropdown-item">Data infrastructure</a>
-                                    <a href="{% url 'service' %}" class="dropdown-item">Machine learning and AI models</a>
+                                    <a href="{% url 'data_collection' %}" class="dropdown-item">Data collection and curation</a>
+                                    <a href="{% url 'data_analytics' %}" class="dropdown-item">Data analytics and decision support</a>
+                                    <a href="{% url 'data_infrastructure' %}" class="dropdown-item">Data infrastructure</a>
+                                    <a href="{% url 'machine_learning' %}" class="dropdown-item">Machine learning and AI models</a>
+                                    <a href="{% url 'application_modernization' %}" class="dropdown-item">Application modernization</a>
+                                    <a href="{% url 'process_optimization' %}" class="dropdown-item">Process optimization</a>
+                                    <a href="{% url 'video_surveillance' %}" class="dropdown-item">Video surveillance and AI</a>
+                                    <a href="{% url 'system_automization' %}" class="dropdown-item">System Automation</a>
+                                    <a href="{% url 'training_consultancy' %}" class="dropdown-item">Training and Consultancy</a>
+                                    <a href="{% url 'software_dev' %}" class="dropdown-item">Software Development and IT support</a>
+
+
+
+
+
+
                                 </div>
                             </div>
                             <div class="nav-item dropdown">

@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+{% load static  i18n %}
+ 
+{% block content %}
+<div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;">
+    <div class="row g-5 gb-5">
+        <div class="bg-light rounded text-center p-5">
+                
+            <h3 class="text-uppercase my-4">Data infrastructure</h3>
+            <p>BPD2I Consulting conceives, designs and implements state of the arts data infrastructures for its clients.
+                 This includes data pipeline  development, infrastructure need assessment, propposal develpment and data
+                  infrastructure setup. Our solutions will enable our clients to create, manage, use, and secure data.
+                Our data pipelines automate the movement and transformation of data between a source system and a target repository. </p>
+            <a class="text-uppercase" href="{% url 'service' %}">Back to Services <i class="bi bi-arrow-left"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+{%endblock%}
