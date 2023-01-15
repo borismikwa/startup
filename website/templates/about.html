@@ -6,8 +6,8 @@
     <div class="container-fluid bg-primary p-5 bg-hero mb-5">
         <div class="row py-5">
             <div class="col-12 text-center">
-                <h1 class="display-2 text-uppercase text-white mb-md-4">About Us</h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
+                <h1 class="display-2 text-uppercase text-white mb-md-4">About BPD2I Consulting</h1>
+                <a href="{% url 'index' %}" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
                 <a href="" class="btn btn-light py-md-3 px-md-5">About</a>
             </div>
         </div>
@@ -20,125 +20,150 @@
         <div class="row gx-5">
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                    <h1 class="text-primary text-uppercase">Our Mission</h1>
+                    <p>Empowering companies for <strong> science practices, </strong> and providing our clients with smart, innovative data and software solutions
+                        that give them compatitive business advantage.</p>
+                    <h1 class="text-primary text-uppercase">Our Vision</h1>
+                    <p>Automate business processes, reduce production cost and leverage data insight to define business success.</p>
+                    <h1 class="text-primary text-uppercase">Our Core Values</h1>
+                    <p>We uphold <strong> Diversity, Inclusion, Innovation, Transparency,Professionalism,Mutual Respect, Collaboration and a "Customer First" philosophy</strong>. 
+                        These Core Values foster exceptional technology solutions delivery and drive our day-to-day operations. By creating a safe space, promoting innovative ideas and collaboration,
+                        our team of experts takes responsibility of each action and produces extraordinary results, delivering solutions that add business values to our customers.  
+                        </p>
+
+                    <div class="rounded bg-dark p-5">
+                        <ul class="nav nav-pills justify-content-between mb-3">
+                            <li class="nav-item w-50">
+                                <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">Do Business with Us</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-1">
+                                <p class="text-secondary mb-0">In need of one or more of the services and/or products we offer, contact us with your need for a fruitful collaboration. 
+                                    We iterate until you are satisfied.
+                                </p>
+                                <a href="{% url 'contact' %}" class="btn btn-primary py-md-1 px-md-5 me-3" style="float:right;height;0.2em;">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
+                
             </div>
             <div class="col-lg-7">
                 <div class="mb-4">
-                    <h5 class="text-primary text-uppercase">About Us</h5>
-                    <h1 class="display-3 text-uppercase mb-0">Welcome to Gymster</h1>
+                    <h5 class="text-primary text-uppercase">About BPD2I Consulting</h5>
+                    <h1 class="display-3 text-uppercase mb-0">Welcome to B&P Data to Insight (BPD2I) Consulting.</h1>
                 </div>
-                <h4 class="text-body mb-4">Diam dolor diam ipsum tempor sit. Clita erat ipsum et lorem stet no labore lorem sit clita duo justo magna dolore</h4>
-                <p class="mb-4">Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum, diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
-                <div class="rounded bg-dark p-5">
-                    <ul class="nav nav-pills justify-content-between mb-3">
-                        <li class="nav-item w-50">
-                            <a class="nav-link text-uppercase text-center w-100 active" data-bs-toggle="pill" href="#pills-1">About Us</a>
-                        </li>
-                        <li class="nav-item w-50">
-                                <a class="nav-link text-uppercase text-center w-100" data-bs-toggle="pill" href="#pills-2">Why Choose Us</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="pills-1">
-                            <p class="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-2">
-                            <p class="text-secondary mb-0">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                        </div>
-                    </div>
-                </div>
+                <h4 class="text-body mb-4">BPD2I Consulting believes in the power of data-driven decisions and in challenging the status quo.
+                    We believe in structuring organizations for science practices, creating avenues to explore
+                   organizations' full potentials and bringing business growth.  </h4>
+                <p class="mb-4">We challenge the status quo by restructuring or replacing 
+                    organizations' data architechture, designing contemporary data instrumentation procedures,
+                    reshaping the data collection processes, and tailoring them to meet modern business needs.
+                    We wrangle and preprocess both existing and newly collected company data, perform exploratory data analysis using cutting-edge technology,
+                    and present results and recommendations in ways that drive key business decisions, culminating in more return on investment. BPD2I Consulting's team of experts
+                    builds and delivers quality software, custom, fine-tuned Machine Learning (ML) and Artificial Intelligence (AI) models, and writes custom scripts that run 
+                    efficiently (in terms of resource demand and time complexity). We beef up company security by <strong> installing AI powered video surveillance systems</strong> 
+                    and networking company's gadgets in secured intranets that meet contemporary network security standards.</p>
+                <p>
+                    <strong>B&P Data to Insight Consulting</strong> is an innovation-driven company that empowers and supports organizations/companies
+                    in diverse domains in navigating their digital transformation journery. We also provide specialized trainings on software engineering, data collection and processing 
+                    methodologies and in developing Machine Learning and Artificial Intelligence solutions using state of the art technologies.  BPD2I Consulting 
+                    gives companies a competitive business advantage by ensuring company processes and infrastructure are tailored for science practices. Through our training programs, we inculcate in company employees 
+                    the ability to drive business growth by making extensive use of business data and data insights. We do not only collect data, explore them, present insights and recommendations in easy to understand ways, but we equally
+                    build the capacity of our clients' employees to discover more business avenues from their data with the passage of time. 
+                </p>
+                <p><strong>BPD2I Consulting </strong>has extensive expertise in Data Architechture, Software Engineering, Data Analytics, and applies Machine Learning and Artificial Intelligence
+                    in a collective manner to deliver enterprise solutions that address complex problems including <strong>humaniterian crises </strong>issues.
+                </p>
+                
             </div>
         </div>
     </div>
     <!-- About End -->
 
-
-    <!-- Programe Start -->
-    <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 180px;">
-        <div class="row g-5 gb-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-six-pack display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Body Building</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-barbell display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Weight Lefting</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-bodybuilding display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Muscle Building</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6 text-center">
-                <h1 class="text-uppercase text-light mb-4">30% Discount For This Summer</h1>
-                <a href="" class="btn btn-primary py-3 px-5">Become A Member</a>
-            </div>
+     <!-- Team Start -->
+     <div class="container-fluid p-5">
+        <div class="mb-5 text-center">
+            <h5 class="text-primary text-uppercase">The Team</h5>
+            <h1 class="display-3 text-uppercase mb-0">Our Steering Experts</h1>
         </div>
-    </div>
-    <!-- Programe Start -->
-
-
-    <!-- Facts Start -->
-    <div class="container-fluid bg-dark facts p-5" style="margin-bottom: 90px;">
-        <div class="row gx-5 gy-4 py-5">
+        <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-star fs-4 text-white"></i>
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'web/img/team-1.jpg' %}"alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Experience</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Isabel Stewart</h5>
+                        <p class="text-uppercase text-secondary m-0">CEO and Managing Director</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-users fs-4 text-white"></i>
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'web/img/team-2.jpg' %}"alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Our Trainers</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-check fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Complete Project</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Boris Mikwa</h5>
+                        <p class="text-uppercase text-secondary m-0">Senior Data Scientist</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-mug-hot fs-4 text-white"></i>
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'web/img/team-3.jpg' %}" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Happy Clients</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Pius Ngwa</h5>
+                        <p class="text-uppercase text-secondary m-0">Applied Scientist & AI Innovation Lead</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item position-relative">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img class="img-fluid w-100" src="{% static 'web/img/team-3.jpg' %}" alt="">
+                        <div class="team-overlay">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                        <h5 class="text-uppercase text-light">Innocent Ngaruye</h5>
+                        <p class="text-uppercase text-secondary m-0">Director of AI Research and Training</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Facts End -->
+    <!-- Team End -->
     
 {% endblock %}
