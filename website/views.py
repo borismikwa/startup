@@ -1,9 +1,13 @@
 from django.http import HttpResponse
 from django.template import loader
+from . import models
 
 def index(request):
+  #
+  services  = models.Service.all()[3:]
   template = loader.get_template('index.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render(),{'services',services})
+
 
 def about(request):
   template = loader.get_template('about.html')
@@ -26,6 +30,10 @@ def service(request):
   template = loader.get_template('service.html')
   return HttpResponse(template.render())
 
+def service_details(request,id):
+  service = models.Service.get(id=id)
+  template = loader.get_template('service_details.html')
+  return HttpResponse(template.render(),{'service':service})
 def demo(request):
   template = loader.get_template('demo.html')
   return HttpResponse(template.render())
