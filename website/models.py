@@ -158,7 +158,7 @@ class Subscription(models.Model): #payments to consume a product or service
 class Service(models.Model): #services offered like the different programs
     service_name = models.CharField(max_length=150) 
     status = models.BooleanField(default=True) #active or not
-    description = models.CharField(max_length=255)
+    description = models.TextField()
     date_included = models.DateTimeField() #when did we start offering the service
     price = models.CharField(max_length=30)
     currency = models.CharField(max_length=150) #needed for conversion purposes

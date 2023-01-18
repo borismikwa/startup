@@ -85,12 +85,22 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
+                            
                             <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                             <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                             <div class="nav-item dropdown">
+                               
+
                                 <a href="{% url 'service' %}" class="nav-link nav-item dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="{% url 'data_collection' %}" class="dropdown-item">Data collection and curation</a>
+                                    
+                                  
+                                    {% for x in services %}
+                                    
+                                    <a href="{% url 'service_details' x.id %}" class="dropdown-item">{{x.service_name}}</a>
+
+                                  
+                                   <!--
                                     <a href="{% url 'data_analytics' %}" class="dropdown-item">Data analytics and decision support</a>
                                     <a href="{% url 'data_infrastructure' %}" class="dropdown-item">Data infrastructure</a>
                                     <a href="{% url 'machine_learning' %}" class="dropdown-item">Machine learning and AI models</a>
@@ -101,13 +111,15 @@
                                     <a href="{% url 'training_consultancy' %}" class="dropdown-item">Training and Consultancy</a>
                                     <a href="{% url 'software_dev' %}" class="dropdown-item">Software Development and IT support</a>
 
-
-
+                                   -->
+                                   {% endfor %}
 
 
 
                                 </div>
+
                             </div>
+                            
                             <div class="nav-item dropdown">
                                 <a href="{% url 'product' %}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
                                 <div class="dropdown-menu rounded-0 m-0">

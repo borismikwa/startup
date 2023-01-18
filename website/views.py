@@ -2,21 +2,25 @@ from django.http import HttpResponse
 from django.template import loader
 from . import models
 
+def navbar():
+  ourservices = models.Service.objects.all()
+  return ourservices
+
 def index(request):
-  #
-  services  = models.Service.all()[3:]
+  # services  = models.Service.all()[3:]
+  ourservices = models.Service.objects.all()
   template = loader.get_template('index.html')
-  return HttpResponse(template.render(),{'services',services})
+  return HttpResponse(template.render({'services':navbar()}, request))
 
 
 def about(request):
   template = loader.get_template('about.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()}, request))
 
 
 def contact(request):
   template = loader.get_template('contact.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()}, request))
 
 def testimonial(request):
   template = loader.get_template('testimonial.html')
@@ -26,17 +30,17 @@ def blog(request):
   template = loader.get_template('blog.html')
   return HttpResponse(template.render())
 
-def service(request):
-  template = loader.get_template('service.html')
-  return HttpResponse(template.render())
+#def service(request):
+  #template = loader.get_template('service.html')
+  #return HttpResponse(template.render())
 
-def service_details(request,id):
-  service = models.Service.get(id=id)
-  template = loader.get_template('service_details.html')
-  return HttpResponse(template.render(),{'service':service})
+#def service_details(request,id):
+  ##service = models.Service.get(id=id)
+  #template = loader.get_template('service_details.html')
+  #return HttpResponse(template.render(),{'service':service})
 def demo(request):
   template = loader.get_template('demo.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()}, request))
 
 def program(request):
   template = loader.get_template('program.html')
@@ -56,7 +60,7 @@ def regression_demo(request):
 
 def product(request):
   template = loader.get_template('product.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()}, request))
 
 def data_collection(request):
   template = loader.get_template('data_collection.html')
@@ -104,5 +108,25 @@ def application_modernization(request):
 def software_dev(request):
   template = loader.get_template('software_dev.html')
   return HttpResponse(template.render())
+
+#Get service details
+def service_details(request,id):
+  mydata = models.Service.objects.get(id=id)
+  template = loader.get_template('service_details.html')
+  context = {
+    'myservice': mydata,
+  }
+  return HttpResponse(template.render(context, request))
+
+
+#pass all services to service page
+def service(request):
+  mydata1 = models.Service.objects.all().order_by('id')
+  template = loader.get_template('service.html')
+  context = {
+    'myservices': mydata1,
+  }
+  return HttpResponse(template.render(context, request))
+
 
 
