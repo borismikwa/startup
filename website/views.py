@@ -7,10 +7,11 @@ def navbar():
   return ourservices
 
 def index(request):
-  # services  = models.Service.all()[3:]
-  ourservices = models.Service.objects.all()
+  short_des  = models.Service.objects.all().order_by('id')[:4]
+  #ourservices = models.Service.objects.all()
   template = loader.get_template('index.html')
-  return HttpResponse(template.render({'services':navbar()}, request))
+  #return HttpResponse(template.render({'services':navbar(),'short_des': short_des}, request))
+  return HttpResponse(template.render({'short_des': short_des}, request))
 
 
 def about(request):
@@ -48,15 +49,15 @@ def program(request):
 
 def data_visualization(request):
   template = loader.get_template('data_visualization_demo.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()},request))
 
 def classification_demo(request):
   template = loader.get_template('classification_demo.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()},request))
 
 def regression_demo(request):
   template = loader.get_template('regression_demo.html')
-  return HttpResponse(template.render())
+  return HttpResponse(template.render({'services':navbar()},request))
 
 def product(request):
   template = loader.get_template('product.html')
