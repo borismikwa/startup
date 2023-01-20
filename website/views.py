@@ -7,7 +7,7 @@ def navbar():
   return ourservices
 
 def index(request):
-  short_des  = models.Service.objects.all().order_by('id')[:4]
+  short_des  = models.Service.objects.all().order_by('id')[:3]
   #ourservices = models.Service.objects.all()
   template = loader.get_template('index.html')
   #return HttpResponse(template.render({'services':navbar(),'short_des': short_des}, request))

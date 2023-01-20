@@ -158,7 +158,7 @@ class Subscription(models.Model): #payments to consume a product or service
 class Service(models.Model): #services offered like the different programs
     service_name = models.CharField(max_length=150) 
     status = models.BooleanField(default=True) #active or not
-    short_service = models.CharField(max_length=150) #Get short description of a service to be displayed on the home page and services page
+    short_service = models.CharField(max_length=255) #Get short description of a service to be displayed on the home page and services page
     description = models.TextField() #Takes text that fully describes a service to be displayd on service detail page
     date_included = models.DateTimeField() #when did we start offering the service
     price = models.CharField(max_length=30)
