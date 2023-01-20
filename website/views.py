@@ -3,7 +3,7 @@ from django.template import loader
 from . import models
 
 def navbar():
-  ourservices = models.Service.objects.all()
+  ourservices = models.Service.objects.all().order_by('id')
   return ourservices
 
 def index(request):
