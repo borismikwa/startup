@@ -26,4 +26,6 @@ urlpatterns = [
     path('services/video_surveillance/',views.video_surveillance,name='video_surveillance'),
     path('services/application_modernization/',views.application_modernization,name='application_modernization'),
     path('services/software_dev/',views.software_dev,name='software_dev'),
+    path('service_details/<int:id>/',views.service_details,name='service_details'),
+
 ]

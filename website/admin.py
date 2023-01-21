@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import Service
+from website.models import Service
+
 # Register your models here.
-admin.site.register(Service)
+class ServiceDetail(admin.ModelAdmin):
+  list_display = ("service_name","currency","price", "date_included",)
+
+admin.site.register(Service,ServiceDetail)
