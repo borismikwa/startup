@@ -175,7 +175,7 @@ class Service(models.Model): #services offered like the different programs
         ordering = (['-created']) # how the records are sorted when fetched
   
     def __str__(self) -> str:
-        return self.service_name +" " + self.price + " from" + self.description
+        return self.service_name #+" " + self.price + " from" + self.description #displays only service name in admin dashbaord
             
         
 
