@@ -4,7 +4,7 @@ from . import models
 
 def index(request):
   #
-  services  = models.Service.all()[3:]
+  services  = models.Service.objects.all()[3:]
   template = loader.get_template('index.html')
   return HttpResponse(template.render(),{'services',services})
 
