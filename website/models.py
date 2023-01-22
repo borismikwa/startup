@@ -168,7 +168,7 @@ class Service(models.Model): #services offered like the different programs
     created = models.DateTimeField(auto_now_add=True) # date created
     updated = models.DateTimeField(auto_now=True)#date updated
     promotion_end_date = models.DateTimeField(null=True)
-    avatar = models.ImageField(upload_to="img/services/") #adjust accordingly 
+    avatar = models.ImageField(upload_to="img/services/",blank=True) #adjust accordingly 
     
     class Meta:
         verbose_name_plural ="Services"
