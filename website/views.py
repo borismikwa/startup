@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.template import loader
 from . import models
-
+from .models import Contact
 def navbar():
   ourservices = models.Service.objects.all().order_by('id')
   return ourservices
@@ -129,5 +129,34 @@ def service(request):
   }
   return HttpResponse(template.render(context, request))
 
+def store_contact(request):
+
+  if request.method =='POST':
+
+    #fetch data from the post
+    data = request.POST
+    email = data.get('email')
+    fname = data.get('fname')
+    lname = data.get('lname')
+    subject = data.get('subject')
+    message = data.get('message')
+    print(email,fname,lname,subject,message)
+    #create member object
+    contact = Contact()
+    contact.fname=fname
+    contact.lname=lname
+    contact.email=email
+    contact.subject=subject
+    contact.message =message
+    next_link = request.POST.get('next', '/')
+    try:
+        contact.save()
+        success = "Message sent with success."
+        return HttpResponseRedirect(next_link,{'success':success})
+    except Exception as e:
+        print(e)
+        failure = "505 An internal server error occurred!"
+        return HttpResponseRedirect(next_link, {'failure':failure})
+      
 
 
