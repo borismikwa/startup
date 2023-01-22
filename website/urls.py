@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+ 
 urlpatterns = [
     path('', views.index, name='index'), #index/
     path('about/', views.about, name='about'),
@@ -29,3 +29,4 @@ urlpatterns = [
     path('service_details/<int:id>/',views.service_details,name='service_details'),
 
 ]
+
