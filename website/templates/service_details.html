@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'base_layout.html' %}
 {% load static  i18n %}
  
@@ -8,27 +7,18 @@
         {% if myservice.avatar %}
         <div class="col-lg-12 col-md-6">
             <div class="bg-light rounded text-center p-5">
-             {% comment %} 
-             <hi>display image if it exits</h1>
-             {% endcomment %}
                 <h3 class="text-uppercase my-4">{{myservice.service_name}} </h3>
                 <p>{{myservice.description}}</p>
                 <p><img src="{{ myservice.avatar.url}}" alt="Smiley face" width=50% height=50%\></p>
                 <a class="text-uppercase" href="{% url 'service' %}">Back to services <i class="bi bi-arrow-right"></i></a>
-                
-                              
             </div>
         </div>
-       
         {% else %}
-        div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6">
             <div class="bg-light rounded text-center p-5">
-             
                 <h3 class="text-uppercase my-4">{{myservice.service_name}} </h3>
                 <p>{{myservice.description}}</p>
                 <a class="text-uppercase" href="{% url 'service' %}">Back to services <i class="bi bi-arrow-right"></i></a>
-                
-                
             </div>
         </div>
         {% endif %}
