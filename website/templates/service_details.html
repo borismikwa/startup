@@ -22,9 +22,23 @@
             </div>
         </div>
         {% endif %}
-    </div>
-</div>
 
+    </div>
+
+    
+</div>
+<div class="row g-5 gb-5" style="background-color:white;">
+    {% for services in all_services %}
+    <div class="col-lg-4 col-md-6">
+        <div class="bg-light rounded text-center p-5">
+            
+            <h3 class="text-uppercase my-4">{{services.service_name}} </h3>
+            <p>{{services.short_service}}</p>
+            <a class="text-uppercase" href="{% url 'service_details' services.id %}">Read More <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+     {% endfor %}
+</div>
 
 
 {%endblock%}

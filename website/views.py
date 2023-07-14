@@ -2,6 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.template import loader
 from . import models
 from .models import Contact
+from django.db.models import Q
 def navbar():
   ourservices = models.Service.objects.all().order_by('id')
   return ourservices
@@ -113,9 +114,10 @@ def software_dev(request):
 #Get service details
 def service_details(request,id):
   mydata = models.Service.objects.get(id=id)
+  all_services = models.Service.objects.filter(~Q(id=id)).order_by('id')[:3]
   template = loader.get_template('service_details.html')
   context = {
-    'myservice': mydata,
+    'myservice': mydata,'all_services':all_services,
   }
   return HttpResponse(template.render(context, request))
 
