@@ -7,94 +7,42 @@
 <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;background-color: white;">
     <div class="row g-5 gb-5" style="background-color:white ;">
         <div class="col-lg-4 col-md-6">
-            <div class=" rounded text-center p-5">
-                <h3 class="text-uppercase my-4">Providing Data & Cutting-Edge</h3>
-                <h3 class="my-4" style="color: #FC6A03"> Software Solutions</h3>
-                <br/>
-                <p style="text-align:left;"> Let <strong style="color:#FC6A03;"> Data Insights </strong> Guide your Operations</p>
-                <p style="text-align: justify;"> BP Data Consulting believes in the power of data-driven decisions and in challenging the status quo. 
-                    We believe in structuring organizations for science practices, creating avenues to explore organizations' 
-                    full potentials leading to business growth. 
+            <div class="bg-light rounded text-center p-5">
+                <h3 class="text-uppercase my-4">Data-driven Customer Service </h3>
+                <p>Know your customer's next move and tailor your services to meet their needs using unparallel data insights. Advance your mission with our smarter AI solutions 
                    
                 </p>
-                <p style="text-align: justify;">
-                    We develop <strong style="color:#FC6A03;"> smart software solutions </strong> as part of the ecosystem 
-                    your business needs to thrive. 
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6">
-            <div class=" rounded text-center p-5">
-                <img class="w-1" style="margin-left:-20%;transform:scale(0.65);margin-top:-15%;height:auto;width:auto\9;" src="{% static 'web/img/dashboard.jpg' %}" alt="Image">
-            </div>
-        </div>
-    </div>
 
-    <div class="row g-5 gb-5 bg-light" style="backgroun-color:white ;">
-        <h2 style="text-align:center;color:#FC6A03;">How we operate </h2>
-        <div class="col-lg-6 col-md-6">
-            <div class=" rounded text-center p-5">
-                <h3 class="text-uppercase my-4">Data-driven Customer Service</h3>
-                <p style="text-align:left;">Know your customer's next move and tailor your services to meet their needs using unparallel data insights. Advance your mission with our smarter AI solutions 
-                </p>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6">
-            <div class=" rounded text-center p-5">
-                <h3 class="text-uppercase my-4">Find the right words for your clients </h3>
-                <p style="text-align:left;">We help your business optimize communication with potential customers and drive conversion while reducing churn. With our guidance, your business is sure to succeed in its campaigns and thrive with the right level of support. 
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-4 col-md-6">
             <div class="bg-light rounded text-center p-5">
-                <h3 class="text-uppercase my-4">Develop your optimal data strategy </h3>
-                <p style="text-align:left;">A robust data strategy is key to tapping your rich data potential. We lend our experts' experiences
+                <h3 class="text-uppercase my-4">Find the right words for your clients </h3>
+                <p>We help your business optimize communication with potential customers and drive conversion while reducing churn. With our guidance, your business is sure to succeed in its campaigns and thrive with the right level of support. 
+                   
+                </p>
+
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="bg-light rounded text-center p-5">
+                <h3 class="text-uppercase my-4">Develop your optimal data strategy</h3>
+                <p>A robust data strategy is key to tapping your rich data potential. We lend our experts' experiences
                     to develop cost effective data strategy for your business with evident long-term benefits.
                    
                 </p>
-                <p style="text-align:left;">Building smart software solutions that are aligned with organization's needs</p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6">
-            <div class=" rounded text-center p-5">
-                <img class="w-1" style="margin-left:-20%;transform:scale(0.9);margin-top:-15%;height:auto;width:auto\9;" src="{% static 'web/img/carousel-13.jpg' %}" alt="Image">
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12 col-md-6 text-center">
-        <h1  class="text-uppercase my-4 py-3 px-5">What we do</h1>
-    </div>
-    <br/>
-    
-
-    <div class="row g-5 gb-5" style="background-color:white ;">
-        {% for short_service in short_des%}
-        <div class="col-lg-4 col-md-6">
-            <div class="bg-light rounded text-center p-5">
-                <h3 class="text-uppercase my-4">{{short_service.service_name}} </h3>
-                <p style="text-align:left;">{{short_service.short_service}}</p>
-                <a class="text-uppercase" href="{% url 'service_details' short_service.id %}">Read more <i class="bi bi-arrow-right"></i></a>
 
             </div>
         </div>
-        {% endfor %}
-        <div class="col-lg-12 col-md-6 text-center">
-            <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5">More Services</a>
-            
-        </div>
-        <br/>
+        
     </div>
     
+
 </div>
-
-
 
 <!-- New format ends-->
 
-
-    <!-- Carousel Start >
+    <!-- Carousel Start -->
     <div class="row g-5 gb-5">
         <div class="col-lg-12 col-md-12">
             <div class="container-fluid p-0 mb-5">
@@ -107,6 +55,7 @@
                                     <h5 class="text-white text-uppercase">We collect, preprocess and analyse your data for insights</h5>
                                     <h1 class="display-6 text-white text-uppercase mb-md-4">Exploit your data's full potential with us</h1>
                                     <a href="#business" class="btn btn-primary py-md-3 px-md-5 me-3">Do Business with Us</a>
+                                    <!-- a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</!-->
                                 </div>
                             </div>
                         </div>
@@ -155,7 +104,7 @@
             </div>
         </div>
    </div>
-    <! Carousel End -->
+    <!-- Carousel End -->
 
 
     <!-- About Start -->
@@ -164,6 +113,34 @@
 
      <!--Add partial-->
        
+    <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;background-color: white;">
+        <div class="col-lg-12 col-md-6 text-center">
+            <h1  class="text-uppercase my-4 py-3 px-5">What we do</h1>
+        </div>
+        <br/>
+        
+
+        <div class="row g-5 gb-5" style="background-color:white ;">
+            {% for short_service in short_des%}
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light rounded text-center p-5">
+                    <h3 class="text-uppercase my-4">{{short_service.service_name}} </h3>
+                    <p>{{short_service.short_service}}</p>
+                    <a class="text-uppercase" href="{% url 'service_details' short_service.id %}">Read more <i class="bi bi-arrow-right"></i></a>
+
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-12 col-md-6 text-center">
+                <a href="{% url 'service' %}" class="btn btn-primary py-3 px-5">More Services</a>
+                
+            </div>
+            <br/>
+        </div>
+        
+
+    </div>
+    
    <div class="row g-0">
             <div class="col-lg-3">
 
