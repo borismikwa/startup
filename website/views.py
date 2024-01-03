@@ -133,10 +133,10 @@ def service(request):
 
 def store_contact(request):
 
-  if request.method =='POST':
-
+  if request.method =="POST":
     #fetch data from the post
     data = request.POST
+    print(data)
     email = data.get('email')
     fname = data.get('fname')
     lname = data.get('lname')
